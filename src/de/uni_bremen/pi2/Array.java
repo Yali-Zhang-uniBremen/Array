@@ -4,12 +4,12 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class Array<E> implements Iterable<E> {
-    //int size=0;
+    //private int size;
     private int capacity;
     private E[] puffer;
 
     public Array(int capacity) {
-
+        //size=0;
         this.capacity = capacity;
         puffer = (E[]) new Object[capacity];
 
@@ -20,7 +20,8 @@ public class Array<E> implements Iterable<E> {
     }
 
     int size() {
-        return puffer.length;
+        return //size;
+                puffer.length;
 
     }
 
@@ -42,6 +43,7 @@ public class Array<E> implements Iterable<E> {
 
         }
         puffer[index] = value;
+        //size++;
     }
 
     E get(int index) {
